@@ -76,5 +76,10 @@ def RepresentsInt(s):
     except ValueError:
         return False
 
-def CheckWin(Feld, CharAktiSpi):
-    print("win")
+def CheckWin(Feld, CharAktiSpi, WinFlag):
+    #Waagerrecht Check
+    #Senkrecht Check
+    #Links Oben -> Rechts unten Check
+    #Links Unten -> Rechts Oben Check
+    WinFlag = 0
+    return WinFlag

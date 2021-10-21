@@ -1,7 +1,7 @@
 from array import *
 from Funktionen import *
 
-Gewonnen = 0
+WinFlag = 0
 CharP1 = ""
 CharP2 = ""
 Null = " . "
@@ -21,11 +21,11 @@ Start()
 CharP1, CharP2 = GetChars(Null)
 Print_Feld(F)
 
-while (Gewonnen == 0):
+while (WinFlag == 0):
     row, NaechstSpi  = ZugSpieler(AktiSpi)
     if (RepresentsInt(row) == True):
         Fn = Add_Chip(row, CharAktiSpie(AktiSpi, CharP1, CharP2), F, Null)
         F = Fn
-        CheckWin(F, CharAktiSpie(AktiSpi, CharP1, CharP2))
+        WinFlag = CheckWin(F, CharAktiSpie(AktiSpi, CharP1, CharP2), WinFlag)
     AktiSpi = NaechstSpi
 
