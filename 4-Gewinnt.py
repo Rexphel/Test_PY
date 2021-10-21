@@ -26,6 +26,6 @@ while (Gewonnen == 0):
     if (RepresentsInt(row) == True):
         Fn = Add_Chip(row, CharAktiSpie(AktiSpi, CharP1, CharP2), F, Null)
         F = Fn
-        CheckWin(F, CharAktiSpie(AktiSpi))
+        CheckWin(F, CharAktiSpie(AktiSpi, CharP1, CharP2))
     AktiSpi = NaechstSpi
 
